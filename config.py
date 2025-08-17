@@ -7,5 +7,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 RSS_FEEDS = [
     "https://www.theverge.com/rss/index.xml",
     "https://www.technologyreview.com/feed/",
-    "https://spectrum.ieee.org/rss/fulltext"
+    "https://spectrum.ieee.org/rss/fulltext",
+    "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
 ]
