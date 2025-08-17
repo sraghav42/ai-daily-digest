@@ -1,4 +1,4 @@
-from apscheduler.schedulers.blocking import BlockingScheduler
+#from apscheduler.schedulers.blocking import BlockingScheduler
 from news.rss_scraper import fetch_articles
 from news.summarizer import summarize_text
 from config import RSS_FEEDS
