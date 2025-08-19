@@ -8,7 +8,7 @@ from notifier.telegram_bot import send_to_telegram
 def job():
     print("Running daily AI digest job...")
     init_db()
-    articles = fetch_articles(RSS_FEEDS, max_per_feed=2)
+    articles = fetch_articles(RSS_FEEDS, max_per_feed=1)
 
     for article in articles:
         if is_article_saved(article['link']):
