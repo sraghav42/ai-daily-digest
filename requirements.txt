@@ -3,3 +3,5 @@ google-generativeai
 python-dotenv
 requests
 python-telegram-bot
+pytest
+pytest-mock
