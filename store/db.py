@@ -3,8 +3,8 @@ from datetime import datetime
 
 DB_PATH = "digest.db"
 
-def init_db():
-    conn = sqlite3.connect(DB_PATH)
+def init_db(db_file=DB_PATH):
+    conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS articles (
@@ -19,8 +19,8 @@ def init_db():
     conn.commit()
     conn.close()
 
-def save_article(article):
-    conn = sqlite3.connect(DB_PATH)
+def save_article(article,db_file=DB_PATH):
+    conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     try:
         cursor.execute("""
@@ -40,8 +40,8 @@ def save_article(article):
     finally:
         conn.close()
 
-def is_article_saved(link):
-    conn = sqlite3.connect(DB_PATH)
+def is_article_saved(link,db_file=DB_PATH):
+    conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     cursor.execute("SELECT 1 FROM articles WHERE link = ?", (link,))
     result = cursor.fetchone()
